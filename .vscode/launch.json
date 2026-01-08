@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C++ 运行与调试",
+            "type": "cppdbg",
+            "request": "launch",
+            // 自动寻找和你当前源代码同名的 .exe 文件
+            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            // 使用你电脑中实际的 GDB 路径
+            "miDebuggerPath": "D:\\study\\evm\\mingw64\\mingw64\\bin\\gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            // 这里必须和 tasks.json 中的 label 标签完全一致
+            "preLaunchTask": "C/C++: g++.exe build active file"
+        }
+    ]
+}
